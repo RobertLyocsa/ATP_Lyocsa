@@ -1,0 +1,21 @@
+[
+    {
+      "name": "Meno1",
+      "email": "Meno1@email.com",
+      "date": "1998-08-17",
+      "message": "Toto je testovacia správa pre Meno1."
+    },
+    {
+      "name": "Meno2",
+      "email": "Meno2@example.com",
+      "date": "1998-08-18",
+      "message": "Toto je testovacia správa pre Meno2."
+    },
+    {
+      "name": "Meno3",
+      "email": "Meno3@example.com",
+      "date": "1998-08-19",
+      "message": "Toto je testovacia správa pre Meno3."
+    }
+  ]
+    
