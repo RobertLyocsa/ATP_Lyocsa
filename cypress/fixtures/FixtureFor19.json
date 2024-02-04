@@ -1,0 +1,33 @@
+[
+    {
+      "product": "Jägermeister",
+      "price": "23.99 €",
+      "amount": "29"
+    },
+    {
+      "product": "Hubert De Luxe šumivé víno sladké doux 0,75 l",
+      "price": "5.99 €",
+      "amount": "1"
+    },
+    {
+      "product": "Pilsner Urquell 12 0,5l fľaša",
+      "price": "1.39 €",
+      "amount": "15"
+    },
+    {
+      "product": "J.P. Chenet Chardonnay 0.7l",
+      "price": "3.59 €",
+      "amount": "1"
+    },
+    {
+      "product": "Chrumky arašidové 60g",
+      "price": "0.89 €",
+      "amount": "7"
+    },
+    {
+      "product": "Džús happy day 100% pomaranč",
+      "price": "1.59 €",
+      "amount": "1"
+    }
+  ]
+  
