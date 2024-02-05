@@ -1,9 +1,11 @@
 Feature: Testujem na podstranke 
-    Scenario: Overujem funkcnost podstranky dialog https://www.dovoznakupov.sk/
+    Scenario: Projekt18
     
-    Given Test if webpage is active 'Smart Table'
-    When Accept cookies 'Open Dialog'
-    When Test buttons in main menu 'Open Dialog'
-    When Try add item to basket 'Open Dialog with component'
-    When Look and test basket 'Open dialog with component'
+    Given Test if webpage is active
+    When Accept cookies
+    When I test if the phone numbers are correct
+    When I test buttons in main menu
+    When I test the functionality of the filter
+    When I try add an item to the basket
+    When Look and test basket
     Then Order your product

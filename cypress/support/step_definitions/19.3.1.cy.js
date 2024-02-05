@@ -1,6 +1,6 @@
 ///<reference types="cypress" />
 
-const { Given, When } = require("@badeball/cypress-cucumber-preprocessor");
+const { Given, When, Then, } = require("@badeball/cypress-cucumber-preprocessor");
 
 Given('I visit the website', () => 
 {
@@ -49,6 +49,20 @@ When("I proceed to the checkout", () => {
 // Cart section
 cy.get('div.woocommerce-notices-wrapper > div > a').click();
 
+cy.wait(1000);
+    cy.contains("Zobraziť košík").click({force: true})
+    
+    cy.fixture('FixtureFor19.json').then((fixtures) => {
+      fixtures.forEach(({ product, price, amount },i) => { //amount 
+            
+            cy.get('tbody')
+            .should('contain', product)
+            .and('contain', price);
+            cy.get('tbody input').eq(i)
+            .should('have.value', amount)
+  })
+})
+
 // Function 1 (Odstran produkt a vrat ho spat)
 cy.get('.remove').eq(3).click();
 cy.get('.restore-item').click({ force: true });
@@ -74,7 +88,17 @@ cy.get('.woocommerce-error').should('exist');
 cy.get('.checkout-button').click({ force: true });
 }),
 When("I fill out shipping informations", () => {
-
+  cy.get("#billing_first_name").type("Ladislav")
+  cy.get("#billing_last_name").type("Mrkvička")
+  cy.get("#billing_address_1").type("Nezabudkova")
+  cy.get("#billing_postcode").type("097844")
+  cy.get("#billing_city").type("Trnovce")
+  cy.get("#billing_phone").type("09995595")
+  cy.get("#billing_email").type("email@email.com")
+  cy.get("#billing_first_name").type("Ladislav")
+  cy.get("#billing_first_name").type("Ladislav")
+  cy.get("#billing_first_name").type("Ladislav")
+  cy.get("#terms").check({force:true}).should("be.checked")
 }),
 Then("I complete the purchase", () => {
 });
